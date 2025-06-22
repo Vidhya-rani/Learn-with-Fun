@@ -1,4 +1,133 @@
-unction getData() {
+const alphabetData = [
+  { letter: "B", word: "Bat", img: "Bat.png", gif: "bat.gif" },
+  { letter: "C", word: "Cat", img: "Cat.png", gif: "Cat.gif" },
+  { letter: "D", word: "Dog", img: "Dogs.png", gif: "Dog.gif" },
+  { letter: "E", word: "Elephant", img: "Elephant.png", gif: "elephant.gif" },
+  { letter: "F", word: "Fish", img: "Fish.png", gif: "fish.gif" },
+  { letter: "G", word: "Gun", img: "Gun.png", gif: "guns.gif" },
+  { letter: "H", word: "House", img: "House.png", gif: "house free-video.jpg" },
+  { letter: "I", word: "Ice-cream", img: "Icecream.png", gif: "icecream.gif" },
+  { letter: "J", word: "Jeep", img: "Jeep.png", gif: "Jeep.gif" },
+  { letter: "K", word: "Kite", img: "Kite.png", gif: "Kite.gif" },
+  { letter: "L", word: "Lion", img: "Lion.png", gif: "Lion.gif" },
+  { letter: "M", word: "Mango", img: "Mango.png", gif: "Mango.gif" },
+  { letter: "N", word: "Nails", img: "nails (2).png", gif: "Nails ani.gif" },
+  { letter: "O", word: "Orange", img: "Oranges.png", gif: "Orange.gif" },
+  { letter: "P", word: "Peacock", img: "Peacock.png", gif: "Peacock GIF.gif" },
+  { letter: "Q", word: "Queen", img: "Queen.png", gif: "Queen ani.gif" },
+  { letter: "R", word: "Radish", img: "Radish.png", gif: "Radish ani.gif" },
+  { letter: "S", word: "Sun", img: "Sun.png", gif: "Sun.gif" },
+  { letter: "T", word: "Tiger", img: "Tiger.png", gif: "Tiger Bengal GIF.gif" },
+  { letter: "U", word: "Umbrella", img: "Umbrella.png", gif: "umbrella.gif" },
+  { letter: "V", word: "Van", img: "Van.png", gif: "Van.gif" },
+  { letter: "W", word: "Watch", img: "Watch.png", gif: "Watch ani.gif" },
+  { letter: "X", word: "Xmas-tree", img: "Xmas tree.png", gif: "Xmas tree.gif" },
+  { letter: "Y", word: "Yogurt", img: "Yogurt.png", gif: "Yogurt animation.gif" },
+  { letter: "Z", word: "Zebra crossing", img: "Zebra crossing.png", gif: "Zebra crossing.gif" }
+];
+
+const fruits = [
+  { word: "Mango", img: "Mangoes.jpg", gif: "Mango (2).gif" },
+  { word: "Banana", img: "Banana.jpg", gif: "banana (2).gif" },
+  { word: "Grapes", img: "Grapes.jpg", gif: "Grapes.gif" },
+  { word: "Apple", img: "Apple.jpg", gif: "apple.gif" },
+  { word: "Orange", img: "Orange.jpg", gif: "orange2.gif" },
+  { word: "Papaya", img: "Papaya.jpg", gif: "papaya.gif" },
+  { word: "Pineapple", img: "Pineapple (2).jpg", gif: "Pineapple.gif" },
+  { word: "Watermelon", img: "Watermelon (2).jpg", gif: "Watermelon.gif" },
+  { word: "Pomegranate", img: "promagranate (2).jpg", gif: "Promagranate.gif" },
+  { word: "Strawberry", img: "strawberry (2).jpg", gif: "Strawberry (2).gif" },
+  { word: "Cherry", img: "cherries.jpg", gif: "Cherry.gif" },
+  { word: "Kiwi", img: "Kiwi (2).jpg", gif: "Kiwi.gif" },
+  { word: "Blueberry", img: "Blueberry.jpg", gif: "blueberries.gif" },
+  { word: "Custard Apple", img: "Custard apple.jpg", gif: "Custard Apple (2).jpg" },
+  { word: "Jackfruit", img: "Jackfruit.jpg", gif: "jackfruit.gif" },
+  { word: "Dragon fruit", img: "dragonfruit.jpg", gif: "Dragon.gif" }
+];
+
+const vegetables = [
+  { word: "Carrot", img: "Carrot.jpg", gif: "carrot.gif" },
+  { word: "Potato", img: "Pototos.jpg", gif: "pototos.gif" },
+  { word: "Tomato", img: "Tomato.jpg", gif: "Tomato.gif" },
+  { word: "Onion", img: "Onion.jpg", gif: "Onion.gif" },
+  { word: "Cabbage", img: "Cabbage (2).jpg", gif: "Cabbage.gif" },
+  { word: "Cauliflower", img: "cauliflower.jpg", gif: "Cauliflower.gif" },
+  { word: "Spinach", img: "Spinach (2).jpg", gif: "Spinach.gif" },
+  { word: "Bringal", img: "bringal.jpg", gif: "Briangal.gif" },
+  { word: "Ladyfinger ", img: "Ladies finger.jpg", gif: "Ladies finger (2).jpg" },
+  { word: "Radish", img: "radish.jpg", gif: "Radish ani.gif" },
+  { word: "Beetroot", img: "beetroot.jpg", gif: "beetroot.gif" },
+  { word: "Cucumber", img: "cucumber.jpg", gif: "Cucumber.gif" },
+  { word: "Capsicum", img: "Capsicum.jpg", gif: "Pepper Chili GIF.gif" },
+  { word: "Pumpkin", img: "pumpkin.jpg", gif: "pimkin.gif" },
+  { word: "Bottle gourd", img: "bottle-gourd.jpg", gif: "bottle gourd.jpg" },
+  { word: "Bitter gourd", img: "Bitter gourd.jpg", gif: "bitter gourd (2).jpg" },
+  { word: "Corn", img: "con.jpg", gif: "corn GIF.gif" }
+
+];
+
+const wild = [
+  { word: "Lion", img: "Lion.png", gif: "Lion.gif" },
+  { word: "Tiger", img: "Tiger.png", gif: "TigerA.gif" },
+  { word: "Elephant", img: "Elephant.png", gif: "elephant.gif" },
+  { word: "Leopard", img: "Leopard.jpg", gif: "Leopard.gif" },
+  { word: "Cheetah", img: "cheetah (2).jpg", gif: "GIF by ENSI.gif" },
+  { word: "Deer", img: "deer.jpg.jpg", gif: "Deer.gif" },
+  { word: "Bear", img: "Bear.jpg", gif: "Bear.gif"},
+  { word: "Rhinoceros", img: "Rhinoceros.jpg", gif: "Rhinoceros.gif.gif" },
+  { word: "Giraffe", img: "Giraffe.jpg.jpg", gif: "Giraffe.gif" },
+  { word: "Fox", img: "fox.jpg", gif: "fox GIF.gif" },
+  { word: "Wolf", img: "wolf.jpg", gif: "wolf.gif" },
+  { word: "Gorilla", img: "Gorilla.jpg", gif: "Gorilla.gif" },
+  { word: "Jackal", img: "jackal.jpg", gif: "jackal.gif" },
+  { word: "Wild boar", img: "wild-boar.jpg", gif: "Boar.gif" },
+  { word: "Crocodile", img: "crocodile.jpg.jpg", gif: "crocodile GIF.gif" },
+  { word: "Zebra", img: "Zebra.png", gif: "ZebraAni.jpg" }
+
+];
+
+const pet = [
+  { word: "Dog", img: "Dogs.png", gif: "Dog.gif" },
+  { word: "Cat", img: "Cat.png", gif: "Cat.gif" },
+  { word: "Parrot", img: "Parrot.jpg", gif: "Parrot.gif" },
+  { word: "Rabbit", img: "Rabbit.jpg", gif: "rabbit (2).gif" },
+  { word: "Goldfish", img: "goldfish.jpg", gif: "goldFish.gif" },
+  { word: "Turtle", img: "turtle.jpg", gif: "turtle.gif" },
+  { word: "Cow", img: "cow.jpg", gif: "milk cow GIF.gif" },
+  { word: "Sheep", img: "sheep.jpg", gif: "Sheep.gif" },
+  { word: "Goat", img: "Goat.jpg", gif: "goat.gif" },
+  { word: "Horse", img: "horse.jpg", gif: "HorseAni.gif" },
+  { word: "Donkey", img: "donkey.jpg", gif: "Donkey.gif" },
+  { word: "Pigeon", img: "pigeon.jpg", gif: "pigeon.gif" },
+  { word: "Duck", img: "Duck.jpg", gif: "duck.gif" },
+  { word: "Hen", img: "hen.jpg", gif: "hen.gif" },
+  { word: "Cock", img: "cock.jpg", gif: "cock.gif" }
+];
+
+const birds = [
+  { word: "Sparrow", img: "sparrow.jpg", gif: "Sparrow.gif" },
+  { word: "Peacock", img: "Peacocks.png", gif: "Peacock GIF.gif" },
+  { word: "Parrot", img: "Parrot.jpg", gif: "Parrot.gif" },
+  { word: "Pigeon", img: "pigeon.jpg", gif: "pigeon.gif" },
+  { word: "Crow", img: "Crow.jpg", gif: "crow.gif" },
+  { word: "Eagle", img: "eagle.jpg", gif: "eagle (2).gif" },
+  { word: "Owl", img: "owl.jpg", gif: "owl.gif" },
+  { word: "Kingfisher", img: "Kingfisher.jpg", gif: "Kingfisher.gif" },
+  { word: "Woodpecker", img: "woodpecker.jpg", gif: "Woodpecker.gif" },
+  { word: "Hummingbird", img: "humming bird.jpg", gif: "Humming Bird.gif" },
+  { word: "Swan", img: "Swan (2).jpg", gif: "swan (2).gif" },
+  { word: "Vulture", img: "Vulture.png", gif: "vulture refuses GIF.gif" },
+  { word: "Penguin", img: "Penguin.png", gif: "Penguins.gif" },
+  { word: "Duck", img: "Duck.jpg", gif: "goose.gif" },
+  { word: "Hen", img: "hen.gif", gif: "hen.jpg" },
+  { word: "Crane", img: "Crane.png", gif: "crane (2).gif" },
+  { word: "Nightingale", img: "Nightigle.jpg", gif: "nightingle.gif" },
+  { word: "Ostrich", img: "ostrish.jpg", gif: "Ostrich.gif" }
+];
+let category = 'alphabets';
+let current = -1;
+
+function getData() {
   if (category === 'alphabets') return alphabetData;
   if (category === 'fruits') return fruits;
   if (category === 'vegetables') return vegetables;
