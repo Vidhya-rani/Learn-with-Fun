@@ -1,0 +1,47 @@
+unction getData() {
+  if (category === 'alphabets') return alphabetData;
+  if (category === 'fruits') return fruits;
+  if (category === 'vegetables') return vegetables;
+  if (category === 'wildAnimals') return wild;
+  if (category === 'petAnimals') return pet;
+ if (category === 'birds') return birds;
+
+  return [];
+}
+
+function showCard() {
+  const data = getData();
+
+  if (category === 'alphabets' && current === -1) {
+    document.getElementById("letter").innerText = "A";
+    document.getElementById("word").innerText = "Apple";
+    document.getElementById("image").src = "Apple.png";
+    document.getElementById("gif").src = "apples.gif";
+    return;
+  }
+
+  const item = data[current];
+  document.getElementById("letter").innerText = item.letter || "";
+  document.getElementById("word").innerText = item.word;
+  document.getElementById("image").src = item.img;
+  document.getElementById("gif").src = item.gif;
+}
+
+function next() {
+  const data = getData();
+  current = (current + 1) % data.length;
+  showCard();
+}
+
+function prev() {
+  const data = getData();
+  current = (current - 1 + data.length) % data.length;
+  showCard();
+}
+
+function changeCategory() {
+  const selected = document.getElementById("categorySelect").value;
+  category = selected;
+  current = (category === 'alphabets') ? -1 : 0;
+  showCard();
+}
