@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn Categories</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>Learn with Fun!</h1>
+
+    <select id="categorySelect" onchange="changeCategory()">
+      <option value="alphabets">Alphabets</option>
+      <option value="fruits">Fruits</option>
+      <option value="vegetables">Vegetables</option>
+      <option value="wildAnimals">Wild Animals</option>
+      <option value="petAnimals">Pet Animals</option>
+      <option value="birds">Birds</option>
+
+    </select>
+
+    <div class="card">
+      <h2 id="letter">A</h2>
+      <img id="image" src="Apple.png" alt="Apple">
+      <p id="word">Apple</p>
+      <div id="animation">
+        <img id="gif" src="apples.gif" alt="Apple Animation">
+      </div>
+    </div>
+
+    <div class="controls">
+      <button onclick="prev()">Previous</button>
+      <button onclick="next()">Next</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
