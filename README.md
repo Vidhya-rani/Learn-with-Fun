@@ -4,19 +4,19 @@ This project is a fun and educational web app designed to help young children (a
 Built using HTML, CSS, and JavaScript, the app makes learning enjoyable by showing colorful images and animated GIFs for each item. Kids can easily navigate between items using Next and Previous buttons and choose different categories from a dropdown menu.
 
 🔧 Features
-✅ Alphabet learning from A to Z
+Alphabet learning from A to Z
 
-✅ Categories: Fruits, Vegetables, Wild Animals, Pet Animals, Birds
+Categories: Fruits, Vegetables, Wild Animals, Pet Animals, Birds
 
-✅ Displays an image, animated GIF, and word for each item
+ Displays an image, animated GIF, and word for each item
 
-✅ Easy navigation between items
+ Easy navigation between items
 
-✅ Mobile and desktop responsive
+ Mobile and desktop responsive
 
-✅ Fully built using HTML, CSS, and JavaScript
+ Fully built using HTML, CSS, and JavaScript
 
-✅ Hosted on Netlify
+ Hosted on Netlify
 
 🧠 Purpose
 This project was created to:
@@ -28,11 +28,6 @@ Build an interactive, kid-friendly UI
 Learn how to use GitHub and deploy with Netlify
 
 Share useful tools with parents and teachers of toddlers
-
-🚀 Live Demo
-🔗 Click here to view the live project
-
-Replace the link above with your actual Netlify project URL.
 
 📁 Technologies Used
 HTML
